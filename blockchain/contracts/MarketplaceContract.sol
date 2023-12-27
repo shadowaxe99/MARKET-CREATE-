@@ -1,11 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity ^0.8.0;
-
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "./AssetContract.sol";
+pragma solidity ^0.8.0;tContract.sol";
 import "./RoyaltyContract.sol";
 
 contract MarketplaceContract is ReentrancyGuard, Ownable {
@@ -28,7 +22,7 @@ contract MarketplaceContract is ReentrancyGuard, Ownable {
     mapping(uint256 => Listing) public listings;
 
     constructor(address _assetContractAddress, address _royaltyContractAddress) {
-        assetContract = AssetContract(_assetContractAddress);
+        assetContract = new AssetContractTest(_assetContractAddress);
         royaltyContract = RoyaltyContract(_royaltyContractAddress);
     }
 
