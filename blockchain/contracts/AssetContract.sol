@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol
+ * @custom:imports Imported contracts (ERC721.sol, ERC721URIStorage.sol, ERC721Royalty.sol, Ownable.sol) are up to date and compatible with the current version of the project";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Royalty.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol
+ * @custom:imports Imported contracts (ERC721.sol, ERC721URIStorage.sol, ERC721Royalty.sol, Ownable.sol) are up to date and compatible with the current version of the project";
 
 /**
  */
