@@ -1,0 +1,92 @@
+.collaboration-tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.virtual-workspace {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.virtual-workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.virtual-workspace-content {
+  padding: 15px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.networking-section {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.networking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.networking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.networking-list-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e1e4e8;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.mentorship-program {
+  background-color: #e6f0ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.mentorship-program-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mentorship-program-description {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .collaboration-tools-container {
+    flex-direction: column;
+  }
+
+  .virtual-workspace, .networking-section, .mentorship-program {
+    width: 100%;
+  }
+}
