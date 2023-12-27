@@ -1,14 +1,17 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./AssetContract.sol";
 import "./RoyaltyContract.sol";
 
 contract MarketplaceContract is ReentrancyGuard, Ownable {
+    /**
+     * @dev Market for listing and purchasing assets.
+     */
     AssetContract private assetContract;
     RoyaltyContract private royaltyContract;
 
@@ -30,6 +33,9 @@ contract MarketplaceContract is ReentrancyGuard, Ownable {
     }
 
     function listAsset(uint256 assetId, uint256 price) external nonReentrant {
+        require(assetContract.exists(assetId), "Asset does not exist");
+        require(assetContract.ownerOf(assetId) == msg.sender, "Only asset owner can list");
+        require(price > 0, "Price must be greater than zero");
         require(assetContract.ownerOf(assetId) == msg.sender, "Only asset owner can list");
         require(price > 0, "Price must be greater than zero");
 
@@ -50,6 +56,7 @@ contract MarketplaceContract is ReentrancyGuard, Ownable {
 
         // Transfer funds to the seller
         listing.seller.transfer(listing.price);
+        emit AssetSold(assetId, listing.seller, msg.sender, listing.price);
 
         // Transfer ownership of the asset to the buyer
         assetContract.safeTransferFrom(listing.seller, msg.sender, assetId);
