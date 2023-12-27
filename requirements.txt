@@ -1,9 +1,9 @@
-flask==1.1.2
+flask==2.2.5
 numpy==1.19.5
 pandas==1.1.5
-requests==2.25.1
+requests==2.31.0
 tensorflow==2.4.1
-transformers==4.3.3
+transformers==4.36.0
 scikit-learn==0.24.1
 flask-cors==3.0.10
 flask-jwt-extended==3.25.0
@@ -46,7 +46,7 @@ flake8==3.8.4
 bandit==1.6.3
 safety==1.9.0
 pyOpenSSL==20.0.1
-cryptography==3.3.2
+cryptography==41.0.6
 websocket-client==0.57.0
 gevent==21.1.2
 gevent-websocket==0.10.1
@@ -56,7 +56,7 @@ ccxt==1.42.66
 web3==5.17.0
 eth-brownie==1.14.3
 eth-utils==1.9.5
-eth-abi==2.1.1
+eth-abi==4.2.0
 eth-account==0.5.4
 eth-keys==0.3.3
 eth-tester==0.5.0b3
@@ -84,7 +84,7 @@ MarkupSafe==1.1.1
 click==7.1.2
 h5py==3.1.0
 Pillow==8.1.0
-scipy==1.6.0
+scipy==1.10.0
 tqdm==4.56.0
 xlrd==2.0.1
 openpyxl==3.0.6
@@ -153,7 +153,7 @@ MarkupSafe==1.1.1
 click==7.1.2
 h5py==3.1.0
 Pillow==8.1.0
-scipy==1.6.0
+scipy==1.10.0
 tqdm==4.56.0
 xlrd==2.0.1
 openpyxl==3.0.6
@@ -222,7 +222,7 @@ MarkupSafe==1.1.1
 click==7.1.2
 h5py==3.1.0
 Pillow==8.1.0
-scipy==1.6.0
+scipy==1.10.0
 tqdm==4.56.0
 xlrd==2.0.1
 openpyxl==3.0.6
@@ -291,7 +291,7 @@ MarkupSafe==1.1.1
 click==7.1.2
 h5py==3.1.0
 Pillow==8.1.0
-scipy==1.6.0
+scipy==1.10.0
 tqdm==4.56.0
 xlrd==2.0.1
 openpyxl==3.0.6
@@ -360,7 +360,7 @@ MarkupSafe==1.1.1
 click==7.1.2
 h5py==3.1.0
 Pillow==8.1.0
-scipy==1.6.0
+scipy==1.10.0
 tqdm==4.56.0
 xlrd==2.0.1
 openpyxl==3.0.6

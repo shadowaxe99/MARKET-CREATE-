@@ -1,15 +1,15 @@
-const Web3 = require('web3');
-const AssetContract = require('../contracts/AssetContract.sol');
-const RoyaltyContract = require('../contracts/RoyaltyContract.sol');
-const MarketplaceContract = require('../contracts/MarketplaceContract.sol');
+import { ethers } from "ethers";
+import { AssetContract } from "../contracts/AssetContract.sol";
+import { RoyaltyContract } from "../contracts/RoyaltyContract.sol";
+import { MarketplaceContract } from "../contracts/MarketplaceContract.sol";
 
-const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+const provider = new ethers.providers.JsonRpcProvider('http://localhost:8545');
 
 const assetContractAddress = '0x...'; // Replace with actual contract address
 const royaltyContractAddress = '0x...'; // Replace with actual contract address
 const marketplaceContractAddress = '0x...'; // Replace with actual contract address
 
-const assetContract = new web3.eth.Contract(AssetContract.abi, assetContractAddress);
+const assetContract = new ethers.Contract(assetContractAddress, AssetContract.interface, provider);
 const royaltyContract = new web3.eth.Contract(RoyaltyContract.abi, royaltyContractAddress);
 const marketplaceContract = new web3.eth.Contract(MarketplaceContract.abi, marketplaceContractAddress);
 
