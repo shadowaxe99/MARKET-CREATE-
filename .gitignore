@@ -1,0 +1,229 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories #
+######################
+.idea
+.vscode
+*.sublime-workspace
+
+# Node modules #
+################
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build directories #
+#####################
+dist/
+build/
+coverage/
+
+# Env files #
+#############
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python #
+##########
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook #
+####################
+.ipynb_checkpoints
+
+# pyenv #
+#########
+.python-version
+
+# pipenv #
+##########
+Pipfile.lock
+
+# pytest #
+##########
+.cache
+.pytest_cache/
+
+# mypy #
+########
+.mypy_cache/
+
+# Truffle #
+###########
+build/contracts/
+
+# Hardhat #
+###########
+artifacts/
+cache/
+npm-debug.log*
+
+# Misc #
+########
+*.swp
+*.bak
+*.tmp
+*.temp
+
+# Project-specific #
+####################
+# Add directories and files specific to the Elysium Marketplace project
+# that should not be committed to the Git repository.
+
+# Local development #
+#####################
+local_settings.py
+development_settings.json
+
+# Server-side files #
+#####################
+server/.env
+server/config.js
+
+# AI models #
+#############
+ai/models/
+
+# Blockchain #
+##############
+blockchain/keys/
+blockchain/.env
+
+# Scripts #
+###########
+scripts/*.log
+
+# Test results #
+################
+tests/__pycache__/
+tests/*.pyc
+tests/test_results.xml
+
+# Documentation #
+#################
+docs/build/
+
+# IDE specific #
+################
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.tmproj
+*.esproj
+nbproject/
+*.tscache
+*.tsbuildinfo
+*.log
+
+# Log files #
+#############
+*.log.*
+!src/utils/logger.ts # Exclude custom logger utility from ignore
+
+# Dependency directories #
+##########################
+jspm_packages/
+bower_components/
+
+# Output of 'npm pack' #
+########################
+*.tgz
+
+# Yarn Integrity file #
+#######################
+.yarn-integrity
+
+# dotenv environment variables file #
+#####################################
+.env.test
+.env.production
+
+# parcel-bundler cache (https://parceljs.org/) #
+#################################################
+.cache
+.parcel-cache
+
+# next.js build output #
+########################
+.next
+out/
+
+# Nuxt.js build / generate output #
+###################################
+.nuxt
+dist/
+
+# Gatsby files #
+################
+.cache/
+# Comment in the public line in if your project uses Gatsby and *not* the /public directory
+# public
+
+# vuepress build output #
+#########################
+.vuepress/dist
+
+# Serverless directories #
+##########################
+.serverless/
+
+# FuseBox cache #
+#################
+.fusebox/
+
+# DynamoDB Local files #
+########################
+.dynamodb/
+
+# TernJS port file #
+####################
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions #
+#############################################################
+.vscode-test
+
+# End of https://www.gitignore.io/api/node,react,python,visualstudiocode,sublimetext,macos,linux,windows

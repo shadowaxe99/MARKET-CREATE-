@@ -1,0 +1,77 @@
+.security-features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.security-feature {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.security-feature-title {
+  font-size: 1.2em;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.security-feature-description {
+  font-size: 1em;
+  color: #666666;
+}
+
+.security-feature-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #4a90e2;
+}
+
+.wallet-security {
+  background-image: url('../assets/wallet-security-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.data-privacy {
+  background-image: url('../assets/data-privacy-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.smart-contract-audit {
+  background-image: url('../assets/smart-contract-audit-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.compliance-monitoring {
+  background-image: url('../assets/compliance-monitoring-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.biometric-security {
+  background-image: url('../assets/biometric-security-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+@media (max-width: 768px) {
+  .security-features-container {
+    flex-direction: column;
+  }
+
+  .security-feature {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
