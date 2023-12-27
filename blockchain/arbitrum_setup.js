@@ -1,4 +1,5 @@
-const { ethers } = require("ethers");
+import { ethers } from "ethers";
+import { JsonRpcProvider } from "ethers/providers";
 
 // Arbitrum RPC URLs for connecting to the network
 const ARBITRUM_MAINNET_RPC_URL = "https://arb1.arbitrum.io/rpc";
@@ -31,3 +32,5 @@ module.exports = {
   arbitrumMainnetProvider,
   arbitrumTestnetProvider
 };
+import { ethers } from "ethers";
+import { JsonRpcProvider } from "ethers/providers";
