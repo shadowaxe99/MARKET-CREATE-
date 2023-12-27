@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
  * @dev This contract allows creators to receive royalties for their assets.
  * It supports both ERC721 and ERC1155 NFT standards.
  */
-contract RoyaltyContract is Ownable {
+contract RoyaltyContract is ERC721, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdTracker;
@@ -44,8 +44,9 @@ contract RoyaltyContract is Ownable {
 
     /**
      * @dev Pays royalties to the creator of the token.
-     * @param tokenId The ID of the token
-     * @param salePrice The sale price of the token
+     * This function allows the payment of royalties to the creator of the token based on the sale price.
+     * @param tokenId The ID of the token for which royalties are being paid
+     * @param salePrice The sale price of the token for which royalties are being paid
      */
     function payRoyalty(uint256 tokenId, uint256 salePrice) external payable {
         address creator = _creators[tokenId];
@@ -61,9 +62,10 @@ contract RoyaltyContract is Ownable {
 
     /**
      * @dev Retrieves the royalty information for a token.
-     * @param tokenId The ID of the token
-     * @return creator The address of the creator
-     * @return royaltyPercentage The royalty percentage
+     * This function retrieves the royalty information for a token.
+     * @param tokenId The ID of the token to retrieve the royalty information for
+     * @return creator The address of the creator who will receive the royalties
+     * @return royaltyPercentage The percentage of the sale price to be paid as royalties
      */
     function getRoyaltyInfo(uint256 tokenId) external view returns (address creator, uint16 royaltyPercentage) {
         return (_creators[tokenId], _royalties[tokenId]);
