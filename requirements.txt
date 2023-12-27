@@ -23,7 +23,7 @@ beautifulsoup4==4.9.3
 lxml==4.6.2
 SpeechRecognition==3.8.1
 PyAudio==0.2.11
-torch==1.7.1
+torch==1.13.1
 torchaudio==0.7.2
 torchvision==0.8.2
 matplotlib==3.3.4
