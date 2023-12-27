@@ -10,10 +10,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @title AssetContract - ERC721 NFT with Royalty
  * @dev Extends ERC721 Non-Fungible Token Standard basic implementation with royalty support
  */
-
-// Test cases
 contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
-    using Strings for uint256;
+    string private _symbol; {
+    string private _symbol;
 
     // Name of the NFT
     string private _name;
@@ -27,7 +26,7 @@ contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
     // Base URI
     string private _baseURIextended;
 
-    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) {
+    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) ERC721URIStorage() {
         _name = name_;
         _symbol = symbol_;
     }
