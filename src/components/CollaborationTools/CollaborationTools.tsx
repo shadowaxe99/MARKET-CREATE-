@@ -54,7 +54,11 @@ const CollaborationTools: React.FC<CollaborationToolsProps> = () => {
         <div className="selected-workspace">
           <h3>{selectedWorkspace.name}</h3>
           <p>{selectedWorkspace.description}</p>
-          {/* Additional details and actions for the selected workspace */}
+          <div className="workspace-details">
+          <h4>Additional Details</h4>
+          <p>{selectedWorkspace.details}</p>
+          <button onClick={()=>handleSelectedWorkspaceAction(selectedWorkspace.id)}>Action</button>
+        </div>
         </div>
       )}
     </div>
