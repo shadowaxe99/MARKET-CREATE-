@@ -20,7 +20,7 @@ Flask-SocketIO==5.0.1
 Werkzeug==2.3.8
 Flask-Testing==0.8.1
 beautifulsoup4==4.9.3
-lxml==4.6.2
+lxml==4.9.1
 SpeechRecognition==3.8.1
 PyAudio==0.2.11
 torch==1.7.1
