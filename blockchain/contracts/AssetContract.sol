@@ -4,13 +4,12 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol
  * @custom:imports Imported contracts (ERC721.sol, ERC721URIStorage.sol, ERC721Royalty.sol, Ownable.sol) are up to date and compatible with the current version of the project";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Royalty.sol";
 import "@openzeppelin/contracts/access/Ownable.sol
  * @custom:imports Imported contracts (ERC721.sol, ERC721URIStorage.sol, ERC721Royalty.sol, Ownable.sol) are up to date and compatible with the current version of the project";
 
 /**
- * @title AssetContract - ERC721 NFT with Royalty
- * @dev Extends ERC721 Non-Fungible Token Standard basic implementation with royalty support
  */
 contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
     string private _symbol; {
@@ -45,6 +44,21 @@ contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
      * - the caller must not be an empty address.
      * - `tokenId` must not exist.
      * - `tokenURI` must not be empty.
+     * @param name_ The name of the token collection
+     * @param symbol_ The symbol of the token collection
+         * @return The ID of the newly created token
+     */
+    /**
+     * @dev Creates a new token for `msg.sender` with the given `tokenURI` and royalty percentage.
+     * @param tokenURI The token URI
+     * @param royaltyFraction The royalty percentage as a fraction of 10000 (e.g., 5000 for 50%)
+     * @return The ID of the newly created token
+     */
+    /**
+     * @dev Creates a new token for `msg.sender` with the given `tokenURI` and royalty percentage.
+     * @param tokenURI The URI of the token
+     * @param royaltyFraction The royalty percentage (as a fraction of 10000)
+     * @return The ID of the newly created token
      */
 
     /**
@@ -61,11 +75,16 @@ contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
      * - `tokenURI` must not be empty.
      */
     function createToken(string memory tokenURI, uint96 royaltyFraction) public returns (uint256) {
+        require(tokenURI.length > 0, "Token URI must not be empty");
+        require(royaltyFraction <= 10000, "Royalty fraction must be less than or equal to 10000");
+        require(tokenURI.length > 0, "Token URI must not be empty");
+        require(royaltyFraction <= 10000, "Royalty fraction must be less than or equal to 10000");
         uint256 newTokenId = totalSupply() + 1;
         _mint(msg.sender, newTokenId);
         _setTokenURI(newTokenId, tokenURI);
         _setTokenRoyalty(newTokenId, msg.sender, royaltyFraction);
-        return newTokenId;
+event TokenCreated(uint256 indexed tokenId, address owner, string tokenURI, uint96 royaltyFraction);
+    event RoyaltyUpdated(uint256 indexed tokenId, address recipient, uint96 royaltyFraction);        return newTokenId;
     }
 
     /**
@@ -75,7 +94,7 @@ contract AssetContract is ERC721, ERC721URIStorage, ERC721Royalty, Ownable {
      *
      * - `tokenId` must exist.
      */
-    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal override {
+    function _setTokenURI(uint256 tokenId, string memory _tokenURI) private override {
         require(_exists(tokenId), "ERC721URIStorage: URI set of nonexistent token");
         _tokenURIs[tokenId] = _tokenURI;
     }
