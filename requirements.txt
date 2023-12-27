@@ -48,7 +48,7 @@ safety==1.9.0
 pyOpenSSL==20.0.1
 cryptography==41.0.6
 websocket-client==0.57.0
-gevent==21.1.2
+gevent==23.9.0
 gevent-websocket==0.10.1
 python-engineio==4.0.0
 python-binance==0.7.9
