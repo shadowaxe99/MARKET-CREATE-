@@ -25,7 +25,7 @@ contract MarketplaceContract is ReentrancyGuard, Ownable {
     mapping(uint256 => Listing) public listings;
 
     constructor(address _assetContractAddress, address _royaltyContractAddress) {
-        assetContract = AssetContract(_assetContractAddress);
+        assetContract = new AssetContractTest(_assetContractAddress);
         royaltyContract = RoyaltyContract(_royaltyContractAddress);
     }
 
