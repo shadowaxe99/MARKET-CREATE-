@@ -1,0 +1,80 @@
+@import 'navbar.scss';
+@import 'footer.scss';
+@import 'marketplace.scss';
+@import 'scriptpad.scss';
+@import 'digitalasset.scss';
+@import 'collaborationtools.scss';
+@import 'securityfeatures.scss';
+@import 'aiintegration.scss';
+@import 'blockchainintegration.scss';
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+// Utility classes
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+// Layout
+header, footer {
+    background: #f8f9fa;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header, footer {
+        padding: 0.5rem 0;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

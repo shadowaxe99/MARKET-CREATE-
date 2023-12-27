@@ -1,0 +1,57 @@
+#blockchainIntegration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f7f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .blockchainIntegration-header {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .blockchainIntegration-content {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .blockchainIntegration-actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

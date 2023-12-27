@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+Disallow: /server/
+Disallow: /ai/
+Disallow: /blockchain/
+Disallow: /tests/
+Sitemap: /sitemap.xml
