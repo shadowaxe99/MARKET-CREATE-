@@ -62,7 +62,7 @@ eth-keys==0.3.3
 eth-tester==0.5.0b3
 py-solc-x==1.0.0
 solc-select==0.2.0
-pycryptodome==3.9.9
+pycryptodome==3.19.1
 pyjwt==2.0.1
 authlib==0.15.3
 Flask-Login==0.5.0
