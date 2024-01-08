@@ -129,7 +129,7 @@ coverage==5.3.1
 codecov==2.1.11
 factory-boy==3.2.0
 Faker==5.8.0
-Mako==1.1.4
+Mako==1.2.2
 python-editor==1.0.4
 alembic==1.5.5
 Flask-Admin==1.5.7
@@ -198,7 +198,7 @@ coverage==5.3.1
 codecov==2.1.11
 factory-boy==3.2.0
 Faker==5.8.0
-Mako==1.1.4
+Mako==1.2.2
 python-editor==1.0.4
 alembic==1.5.5
 Flask-Admin==1.5.7
@@ -267,7 +267,7 @@ coverage==5.3.1
 codecov==2.1.11
 factory-boy==3.2.0
 Faker==5.8.0
-Mako==1.1.4
+Mako==1.2.2
 python-editor==1.0.4
 alembic==1.5.5
 Flask-Admin==1.5.7
@@ -336,7 +336,7 @@ coverage==5.3.1
 codecov==2.1.11
 factory-boy==3.2.0
 Faker==5.8.0
-Mako==1.1.4
+Mako==1.2.2
 python-editor==1.0.4
 alembic==1.5.5
 Flask-Admin==1.5.7
@@ -405,7 +405,7 @@ coverage==5.3.1
 codecov==2.1.11
 factory-boy==3.2.0
 Faker==5.8.0
-Mako==1.1.4
+Mako==1.2.2
 python-editor==1.0.4
 alembic==1.5.5
 Flask-Admin==1.5.7
