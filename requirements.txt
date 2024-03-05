@@ -56,7 +56,7 @@ ccxt==1.42.66
 web3==5.17.0
 eth-brownie==1.14.3
 eth-utils==1.9.5
-eth-abi==4.2.0
+eth-abi==5.0.1
 eth-account==0.5.4
 eth-keys==0.3.3
 eth-tester==0.5.0b3
